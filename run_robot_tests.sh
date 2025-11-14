@@ -3,7 +3,7 @@
 echo "Running tests"
 
 # käynnistetään Flask-palvelin taustalle
-poetry run python3 src/index.py &
+poetry run python3 webcounter/src/index.py &
 
 echo "started Flask server"
 
@@ -15,7 +15,7 @@ done
 echo "Flask server is ready"
 
 # suoritetaan testit
-poetry run robot --variable HEADLESS:true src/tests
+poetry run robot --variable HEADLESS:true webcounter/src/tests
 
 status=$?
 
